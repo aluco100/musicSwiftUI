@@ -17,7 +17,15 @@ struct TrackRow: View {
          withAnimation{
             VStack{
                 HStack{
-                    Image(uiImage: UIImage(data: image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
+                    ZStack{
+                        Image(uiImage: UIImage(data: image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
+                        Button(action: {
+                            //TODO
+                        }, label: {
+                            Image("play").foregroundColor(Color(.white))
+                        })
+                    }
+                    
                     VStack{
                         Text("\(item.artistName)")
                         Text("\(item.trackName)")
