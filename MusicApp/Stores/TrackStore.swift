@@ -12,7 +12,6 @@ import Combine
 
 class TrackStore: ObservableObject {
     
-    var didChange = PassthroughSubject<TrackStore,Never>()
     
     @Published var currentState: [TrackObject]
     @Published var reducer: TrackReducer
@@ -28,7 +27,6 @@ class TrackStore: ObservableObject {
         reducer.getTracks({
             let newState = $0
             self.currentState = newState
-            self.didChange.send(self)
         }, {
             print($0)
         })

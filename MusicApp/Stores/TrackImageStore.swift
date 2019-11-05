@@ -12,7 +12,6 @@ import Combine
 
 class TrackImageStore: ObservableObject {
     
-    var didChange = PassthroughSubject<TrackImageStore,Never>()
     
     @Published var imageData: Data
     @Published var reducer: ImageReducer
@@ -26,7 +25,6 @@ class TrackImageStore: ObservableObject {
     func dispatch(url: String){
         reducer.retrieveImageData(url: url, success: {
             self.imageData = $0
-            self.didChange.send(self)
         }, failure: {
             print($0)
         })
