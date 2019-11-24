@@ -12,18 +12,23 @@ struct TrackRow: View {
     
     @State var item: TrackObject
     @ObservedObject var image: TrackImageStore
+    @ObservedObject var sound: TrackAudioStore
+    @State var selection: Int? = nil
     
     var body: some View {
-         withAnimation{
+        let navigation = NavigationLink(destination: Text("View"), tag: 1, selection: $selection) { EmptyView() }
+
+         return withAnimation{
             VStack{
+                navigation
                 HStack{
                     ZStack{
                         Image(uiImage: UIImage(data: image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
                         Button(action: {
-                            //TODO
-                        }, label: {
+                            self.sound.dispatch(url: self.item.previewUrl)
+                        }){
                             Image("play").foregroundColor(Color(.white))
-                        })
+                        }
                     }
                     
                     VStack{
@@ -34,6 +39,9 @@ struct TrackRow: View {
                 }.onAppear(perform: {
                     self.image.dispatch(url: self.item.artworkUrl100)
                 })
+//                .onTapGesture {
+//                    self.selection = 1
+//            }
             .padding()
             .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             .background(Color(.white))

@@ -13,13 +13,16 @@ struct TracksView: View {
     @ObservedObject var store: TrackStore
     
     var body: some View {
-        return List{
-            ForEach(self.store.state, id: \.id){
-                item in
-                TrackRow(item: item, image: TrackImageStore())
-            }
-        }.onAppear(perform: {
-            self.store.dispatch()
-        })
+        return
+            NavigationView{
+                List{
+                    ForEach(self.store.state, id: \.id){
+                        item in
+                        TrackRow(item: item, image: TrackImageStore(), sound: TrackAudioStore())
+                    }
+                }.onAppear(perform: {
+                    self.store.dispatch()
+                })
+        }
     }
 }

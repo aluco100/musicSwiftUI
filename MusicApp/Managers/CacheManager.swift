@@ -36,6 +36,7 @@ class CacheManager {
         track.setValue(trackObject.id, forKey: "trackID")
         track.setValue(trackObject.trackName, forKey: "trackName")
         track.setValue(trackObject.trackViewUrl, forKey: "trackViewUrl")
+        track.setValue(trackObject.previewUrl, forKey: "previewUrl")
         
         do {
             try managedContext.save()

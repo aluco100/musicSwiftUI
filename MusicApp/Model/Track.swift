@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 import Alamofire
 
-struct TrackObject: Mappable, Identifiable {
+struct TrackObject: Mappable {
     
     //MARK: - Properties
     var id: Int = 0
@@ -26,6 +26,7 @@ struct TrackObject: Mappable, Identifiable {
     var artistViewUrl: String = ""
     var trackViewUrl: String = ""
     var artworkUrl100: String = ""
+    var previewUrl: String = ""
     
         
     init?(map: Map) {
@@ -46,9 +47,9 @@ struct TrackObject: Mappable, Identifiable {
         artistViewUrl<-map["artistViewUrl"]
         trackViewUrl<-map["trackViewUrl"]
         artworkUrl100<-map["artworkUrl100"]
+        previewUrl<-map["previewUrl"]
         
     }
-    
-    
-    
 }
+
+extension TrackObject: Identifiable{}
