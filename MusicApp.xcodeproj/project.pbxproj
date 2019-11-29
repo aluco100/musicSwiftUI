@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		68875ADE37AF0B21746C214C /* Pods_MusicAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC628FE745C32D93344E0A2 /* Pods_MusicAppTests.framework */; };
 		8C32284D31872313102A78A2 /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FCA5EA091CB91A8B989ECE /* Pods_MusicApp.framework */; };
+		9942588023919B42001FE27E /* TrackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942587F23919B42001FE27E /* TrackImage.swift */; };
+		9942588123919B42001FE27E /* TrackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942587F23919B42001FE27E /* TrackImage.swift */; };
+		9942588223919B42001FE27E /* TrackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942587F23919B42001FE27E /* TrackImage.swift */; };
 		C3400DE0233EA53DF0D70265 /* Pods_MusicApp_MusicAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71548F7066E887BCE9E7CA1 /* Pods_MusicApp_MusicAppUITests.framework */; };
 		D014F05B236F754F0074F8B6 /* TrackReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014F05A236F754F0074F8B6 /* TrackReducer.swift */; };
 		D014F05F236F760C0074F8B6 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014F05E236F760C0074F8B6 /* CacheManager.swift */; };
@@ -53,6 +56,7 @@
 		2B81F12640505CAB801B3AE2 /* Pods-MusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.debug.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		52FDC59F637E2559B338393D /* Pods-MusicApp-MusicAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp-MusicAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MusicApp-MusicAppUITests/Pods-MusicApp-MusicAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96070BC49D5E8DD060CD1BFB /* Pods-MusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.release.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.release.xcconfig"; sourceTree = "<group>"; };
+		9942587F23919B42001FE27E /* TrackImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImage.swift; sourceTree = "<group>"; };
 		A39ED820075B953A84AE3928 /* Pods-MusicAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MusicAppTests/Pods-MusicAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B2B2307A0C347C3B298A54 /* Pods-MusicApp-MusicAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp-MusicAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MusicApp-MusicAppUITests/Pods-MusicApp-MusicAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7FCA5EA091CB91A8B989ECE /* Pods_MusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +173,7 @@
 			children = (
 				D014F064236F7B370074F8B6 /* TracksView.swift */,
 				D07238C02371170A00D43586 /* TrackRow.swift */,
+				9942587F23919B42001FE27E /* TrackImage.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				D047FA74236F732300BCC92B /* Track.swift in Sources */,
 				D014F065236F7B370074F8B6 /* TracksView.swift in Sources */,
 				D03A6815238AD3DB006AFDFF /* SoundReducer.swift in Sources */,
+				9942588023919B42001FE27E /* TrackImage.swift in Sources */,
 				D014F05B236F754F0074F8B6 /* TrackReducer.swift in Sources */,
 				D047FA42236F6F9900BCC92B /* SceneDelegate.swift in Sources */,
 				D047FA47236F6F9900BCC92B /* ContentView.swift in Sources */,
@@ -510,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D047FA5A236F6F9B00BCC92B /* MusicAppTests.swift in Sources */,
+				9942588123919B42001FE27E /* TrackImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D047FA65236F6F9B00BCC92B /* MusicAppUITests.swift in Sources */,
+				9942588223919B42001FE27E /* TrackImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

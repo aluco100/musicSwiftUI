@@ -15,6 +15,11 @@ class TrackImageStore: ObservableObject {
     
     @Published var imageData: Data
     @Published var reducer: ImageReducer
+    var url: String?{
+        didSet{
+            self.dispatch(url: url ?? "")
+        }
+    }
     
     
     init() {
