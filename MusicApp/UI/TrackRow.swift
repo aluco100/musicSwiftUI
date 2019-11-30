@@ -10,20 +10,25 @@ import SwiftUI
 
 struct TrackRow: View {
     
-    @State var item: TrackObject
-    @ObservedObject var sound: TrackAudioStore
-    @State var selection: Int? = nil
+    var item: TrackObject
+    @Binding var selectedItem : TrackObject?
     
-    var button: some View{
-        Button(action: {
-            self.sound.dispatch(url: self.item.previewUrl)
-        }){
-            Image("play").foregroundColor(Color(.white))
-        }
+    var isLoading = false
+    
+    var isPlaying :  Bool {
+         selectedItem?.id == item.id
     }
     
     var image: some View {
         TrackImage(url:item.artworkUrl100)
+    }
+    
+    var content: some View {
+        VStack(alignment: .leading){
+            Text(self.item.artistName)
+                .bold()
+            Text(self.item.trackName)
+        }
     }
     
     var body: some View {
@@ -31,11 +36,7 @@ struct TrackRow: View {
          return withAnimation{
             Card{
                 self.image
-                VStack(alignment: .leading){
-                    Text(self.item.artistName)
-                        .bold()
-                    Text(self.item.trackName)
-                }
+                self.content
             }
          }.animation(Animation.easeInOut)
     }

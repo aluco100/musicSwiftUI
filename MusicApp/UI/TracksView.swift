@@ -11,18 +11,18 @@ import SwiftUI
 struct TracksView: View {
     
     @ObservedObject var store = TrackStore()
+    @ObservedObject var audioManager = AudioManager()
     
     var body: some View {
-        return
-            NavigationView{
-                List{
-                    ForEach(self.store.tracks, id: \.id){
-                        item in
-                        TrackRow(item: item, sound: TrackAudioStore())
-                    }
-                }.onAppear(perform: {
-                    self.store.dispatch()
-                })
+        
+        NavigationView{
+            List{
+                ForEach(self.store.tracks, id: \.id){ item in
+                    TrackRow(item: item, selectedItem: self.$audioManager.selectedItem, isLoading: self.audioManager.isLoading)
+                }
+            }.onAppear(perform: {
+                self.store.dispatch()
+            })
         }
     }
 }
