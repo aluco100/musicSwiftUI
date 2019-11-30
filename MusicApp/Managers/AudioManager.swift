@@ -60,15 +60,17 @@ final class AudioManager : ObservableObject {
       if(request != nil){
           request?.cancel()
           self.request = nil
+          self.isLoading = false
           return
       }
         
-
+      self.isLoading = true
       
       self.request = Alamofire
             .request(url)
             .responseData(completionHandler: { response in
                 self.request = nil
+                self.isLoading = false
                 self.playSound(data: response.result.value!)
             })
      

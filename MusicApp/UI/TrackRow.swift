@@ -21,6 +21,10 @@ struct TrackRow: View {
     
     var image: some View {
         TrackImage(url:item.artworkUrl100)
+            .overlay(MediaPlayerButton(isPlaying: isPlaying, isLoading:isLoading))
+            .onTapGesture {
+                self.selectedItem = self.isPlaying ? nil : self.item
+            }
     }
     
     var content: some View {

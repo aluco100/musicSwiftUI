@@ -10,6 +10,7 @@
 		4F398FBC2392A32D001A6B00 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F398FBB2392A32D001A6B00 /* Card.swift */; };
 		4F398FBF2392A44B001A6B00 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4F398FBE2392A44B001A6B00 /* URLImage */; };
 		4F398FC12392A7A2001A6B00 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F398FC02392A7A2001A6B00 /* AudioManager.swift */; };
+		4F398FC32392A839001A6B00 /* MediaPlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F398FC22392A839001A6B00 /* MediaPlayerButton.swift */; };
 		68875ADE37AF0B21746C214C /* Pods_MusicAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC628FE745C32D93344E0A2 /* Pods_MusicAppTests.framework */; };
 		8C32284D31872313102A78A2 /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FCA5EA091CB91A8B989ECE /* Pods_MusicApp.framework */; };
 		9942588023919B42001FE27E /* TrackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942587F23919B42001FE27E /* TrackImage.swift */; };
@@ -57,6 +58,7 @@
 		2B81F12640505CAB801B3AE2 /* Pods-MusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.debug.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4F398FBB2392A32D001A6B00 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4F398FC02392A7A2001A6B00 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		4F398FC22392A839001A6B00 /* MediaPlayerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerButton.swift; sourceTree = "<group>"; };
 		52FDC59F637E2559B338393D /* Pods-MusicApp-MusicAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp-MusicAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MusicApp-MusicAppUITests/Pods-MusicApp-MusicAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96070BC49D5E8DD060CD1BFB /* Pods-MusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.release.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.release.xcconfig"; sourceTree = "<group>"; };
 		9942587F23919B42001FE27E /* TrackImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImage.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				D07238C02371170A00D43586 /* TrackRow.swift */,
 				9942587F23919B42001FE27E /* TrackImage.swift */,
 				4F398FBB2392A32D001A6B00 /* Card.swift */,
+				4F398FC22392A839001A6B00 /* MediaPlayerButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				D047FA47236F6F9900BCC92B /* ContentView.swift in Sources */,
 				4F398FC12392A7A2001A6B00 /* AudioManager.swift in Sources */,
 				D014F062236F7AA90074F8B6 /* TrackStore.swift in Sources */,
+				4F398FC32392A839001A6B00 /* MediaPlayerButton.swift in Sources */,
 				D047FA45236F6F9900BCC92B /* MusicApp.xcdatamodeld in Sources */,
 				D07238C52371189E00D43586 /* ImageReducer.swift in Sources */,
 				D014F05F236F760C0074F8B6 /* CacheManager.swift in Sources */,
