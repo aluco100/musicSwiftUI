@@ -7,7 +7,7 @@ DEPENDENCIES:
   - ObjectMapper
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - ObjectMapper
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 85c03ad6ad0c1fb5e48b0d82a48441b418d2a745
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.7.5

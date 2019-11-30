@@ -24,31 +24,21 @@ struct TrackRow: View {
     }
     
     var body: some View {
-        let navigation = NavigationLink(destination: Text("View"), tag: 1, selection: $selection) { EmptyView() }
-
+      
          return withAnimation{
-            VStack{
-//                navigation
+            Card{
                 HStack{
-                    ZStack{
-                        Image(uiImage: UIImage(data: image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
-                        button
-                    }
-                    
-                    VStack{
-                        Text("\(item.artistName)")
-                        Text("\(item.trackName)")
-                    }
-                }
-                }
-                .onTapGesture {
-                    self.selection = 1
+                   ZStack{
+                    Image(uiImage: UIImage(data: self.image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
+                    self.button
+                   }
+                   
+                   VStack{
+                    Text(self.item.artistName)
+                    Text(self.item.trackName)
+                   }
+               }
             }
-            .padding()
-            .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            .background(Color(.white))
-            .cornerRadius(8.0)
-            .shadow(radius: 8.0)
          }.animation(Animation.easeInOut)
     }
 }
