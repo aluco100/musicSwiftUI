@@ -20,19 +20,22 @@ final class AudioManager : ObservableObject {
     @Published var selectedItem : TrackObject? = nil {
         didSet{
             stopSound()
-            self.dispatch(url: self.selectedItem!.previewUrl)
+            
+           if(selectedItem != nil && oldValue?.id != selectedItem?.id){
+                self.dispatch(url: self.selectedItem!.previewUrl)
+            }
         }
     }
         
 
     @Published var isLoading: Bool = false
-    
     @Published var progress = 0.0
 
     
     func playSound(data: Data){
         
         self.stopSound()
+        self.progress = 0.0
         
         do{
             self.player = try AVAudioPlayer(data: data )
