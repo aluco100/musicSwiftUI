@@ -11,7 +11,6 @@ import SwiftUI
 struct TrackRow: View {
     
     @State var item: TrackObject
-    @ObservedObject var image: TrackImageStore
     @ObservedObject var sound: TrackAudioStore
     @State var selection: Int? = nil
     
@@ -23,21 +22,20 @@ struct TrackRow: View {
         }
     }
     
+    var image: some View {
+        TrackImage(url:item.artworkUrl100)
+    }
+    
     var body: some View {
       
          return withAnimation{
             Card{
-                HStack{
-                   ZStack{
-                    Image(uiImage: UIImage(data: self.image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
-                    self.button
-                   }
-                   
-                   VStack{
+                self.image
+                VStack(alignment: .leading){
                     Text(self.item.artistName)
+                        .bold()
                     Text(self.item.trackName)
-                   }
-               }
+                }
             }
          }.animation(Animation.easeInOut)
     }

@@ -32,7 +32,6 @@
 		D047FA65236F6F9B00BCC92B /* MusicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047FA64236F6F9B00BCC92B /* MusicAppUITests.swift */; };
 		D047FA74236F732300BCC92B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047FA73236F732300BCC92B /* Track.swift */; };
 		D07238C12371170A00D43586 /* TrackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07238C02371170A00D43586 /* TrackRow.swift */; };
-		D07238C32371184A00D43586 /* TrackImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07238C22371184A00D43586 /* TrackImageStore.swift */; };
 		D07238C52371189E00D43586 /* ImageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07238C42371189E00D43586 /* ImageReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +85,6 @@
 		D047FA66236F6F9B00BCC92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D047FA73236F732300BCC92B /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		D07238C02371170A00D43586 /* TrackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRow.swift; sourceTree = "<group>"; };
-		D07238C22371184A00D43586 /* TrackImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImageStore.swift; sourceTree = "<group>"; };
 		D07238C42371189E00D43586 /* ImageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReducer.swift; sourceTree = "<group>"; };
 		D71548F7066E887BCE9E7CA1 /* Pods_MusicApp_MusicAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicApp_MusicAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6FD80FC75FB6B680BBAF84 /* Pods-MusicAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicAppTests.release.xcconfig"; path = "Target Support Files/Pods-MusicAppTests/Pods-MusicAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				D014F061236F7AA90074F8B6 /* TrackStore.swift */,
-				D07238C22371184A00D43586 /* TrackImageStore.swift */,
 				D03A6816238AD4CA006AFDFF /* TrackAudioStore.swift */,
 			);
 			path = Stores;
@@ -507,7 +504,6 @@
 				D07238C12371170A00D43586 /* TrackRow.swift in Sources */,
 				D047FA40236F6F9900BCC92B /* AppDelegate.swift in Sources */,
 				D03A6817238AD4CA006AFDFF /* TrackAudioStore.swift in Sources */,
-				D07238C32371184A00D43586 /* TrackImageStore.swift in Sources */,
 				D047FA74236F732300BCC92B /* Track.swift in Sources */,
 				D014F065236F7B370074F8B6 /* TracksView.swift in Sources */,
 				D03A6815238AD3DB006AFDFF /* SoundReducer.swift in Sources */,

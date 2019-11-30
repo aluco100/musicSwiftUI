@@ -7,11 +7,16 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct TrackImage: View {
-    @ObservedObject var image: TrackImageStore = TrackImageStore()
-
+    var url = ""
+    
+    var width = 100.0
+    var height = 100.0
+    
     var body: some View {
-        Image(uiImage: UIImage(data: image.imageData) ?? UIImage()).frame(width: 100.0, height: 100.0, alignment: .center)
+        URLImage((URL(string: url) ?? nil)!)
+            .frame(width: CGFloat(self.width), height: CGFloat(self.height))
     }
 }

@@ -18,7 +18,7 @@ struct TracksView: View {
                 List{
                     ForEach(self.store.state, id: \.id){
                         item in
-                        TrackRow(item: item, image: TrackImageStore(), sound: TrackAudioStore())
+                        TrackRow(item: item, sound: TrackAudioStore())
                     }
                 }.onAppear(perform: {
                     self.store.dispatch()
