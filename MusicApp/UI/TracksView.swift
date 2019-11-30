@@ -10,13 +10,13 @@ import SwiftUI
 
 struct TracksView: View {
     
-    @ObservedObject var store: TrackStore
+    @ObservedObject var store = TrackStore()
     
     var body: some View {
         return
             NavigationView{
                 List{
-                    ForEach(self.store.state, id: \.id){
+                    ForEach(self.store.tracks, id: \.id){
                         item in
                         TrackRow(item: item, sound: TrackAudioStore())
                     }

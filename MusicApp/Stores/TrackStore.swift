@@ -13,20 +13,12 @@ import Combine
 class TrackStore: ObservableObject {
     
     
-    @Published var currentState: [TrackObject]
-    @Published var reducer: TrackReducer
-    
-    var state: [TrackObject]{ currentState }
-    
-    init(initState: [TrackObject]) {
-        currentState = initState
-        reducer = TrackReducer()
-    }
+    @Published var tracks: [TrackObject] = []
+    var reducer = TrackReducer()
     
     func dispatch(){
         reducer.getTracks({
-            let newState = $0
-            self.currentState = newState
+            self.tracks = $0
         }, {
             print($0)
         })
