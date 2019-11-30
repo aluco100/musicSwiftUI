@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4F398FBC2392A32D001A6B00 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F398FBB2392A32D001A6B00 /* Card.swift */; };
+		4F398FBF2392A44B001A6B00 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4F398FBE2392A44B001A6B00 /* URLImage */; };
 		68875ADE37AF0B21746C214C /* Pods_MusicAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC628FE745C32D93344E0A2 /* Pods_MusicAppTests.framework */; };
 		8C32284D31872313102A78A2 /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FCA5EA091CB91A8B989ECE /* Pods_MusicApp.framework */; };
 		9942588023919B42001FE27E /* TrackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942587F23919B42001FE27E /* TrackImage.swift */; };
@@ -96,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F398FBF2392A44B001A6B00 /* URLImage in Frameworks */,
 				8C32284D31872313102A78A2 /* Pods_MusicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +277,9 @@
 			dependencies = (
 			);
 			name = MusicApp;
+			packageProductDependencies = (
+				4F398FBE2392A44B001A6B00 /* URLImage */,
+			);
 			productName = MusicApp;
 			productReference = D047FA3C236F6F9900BCC92B /* MusicApp.app */;
 			productType = "com.apple.product-type.application";
@@ -350,6 +355,9 @@
 				Base,
 			);
 			mainGroup = D047FA33236F6F9900BCC92B;
+			packageReferences = (
+				4F398FBD2392A44B001A6B00 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = D047FA3D236F6F9900BCC92B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -840,6 +848,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F398FBD2392A44B001A6B00 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F398FBE2392A44B001A6B00 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F398FBD2392A44B001A6B00 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D047FA43236F6F9900BCC92B /* MusicApp.xcdatamodeld */ = {
