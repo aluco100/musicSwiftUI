@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 import Alamofire
 
-struct TrackObject: Mappable {
+struct TrackObject: Mappable, Identifiable {
     
     //MARK: - Properties
     var id: Int = 0
@@ -52,4 +52,3 @@ struct TrackObject: Mappable {
     }
 }
 
-extension TrackObject: Identifiable{}
